@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationService } from './services/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'BibliothequeEnLigne';
+
+  constructor(public authService: AuthenticationService, private router: Router){
+
+  }
+
+  logout(){
+    this.authService.logout().subscribe(() => {
+      this.router.navigate(['']);
+    })
+  }
 }
