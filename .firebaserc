@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bibliotheque-en-ligne-f3fec": {
+      "hosting": {
+        "BibliothequeEnLigne": [
+          "bibliotheque-en-ligne-f3fec"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bibliotheque-en-ligne-f3fec"
+  }
+}
