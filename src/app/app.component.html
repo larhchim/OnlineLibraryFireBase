@@ -1,11 +1,11 @@
 <mat-toolbar color="primary">
   <div class="logo-container" routerLink="/home">
     <img  class="profile-image-toolbar"
-    width="80" 
+    width="70" 
     height="50" 
     src="assets/images/Xevlabs.png"
     />
-    <span>Library Management</span>
+    <span>E-Library@2.0</span>
   </div>
   <ng-container *ngIf="user$ | async as user; else loginButton">
     <button mat-button [matMenuTriggerFor]="userMenu">

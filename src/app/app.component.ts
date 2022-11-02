@@ -19,6 +19,7 @@ export class AppComponent {
 
   logout(){
     this.authService.logout().subscribe(() => {
+      localStorage.removeItem('uid')
       this.router.navigate(['']);
     })
   }

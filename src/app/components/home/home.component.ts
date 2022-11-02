@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from 'src/app/services/authentication.service';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -11,9 +10,17 @@ export class HomeComponent implements OnInit {
 
   user = this.usersService.currentUserProfile;
 
-  constructor(private authService: AuthenticationService, private usersService: UsersService) { }
+  constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
+    this.user.subscribe(
+      (data) => {
+        localStorage.setItem('uid',data?.uid ?? '')
+      },
+      (err) => {
+        console.log(err);
+      }
+    )
   }
 
 }

@@ -40,7 +40,8 @@ export class LoginComponent implements OnInit {
         loading: 'Logging in...',
         error: 'There was an error'
       })
-    ).subscribe(() => {
+    ).subscribe((data) => {
+      localStorage.setItem('uid',data.user.uid)
       this.router.navigate(['/home']);
     })
   }

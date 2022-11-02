@@ -22,6 +22,13 @@ import { MatMenuModule } from '@angular/material/menu';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { ProfileComponent } from './components/profile/profile.component';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { CreateBookComponent } from './components/create-book/create-book.component';
+import {MatChipsModule} from '@angular/material/chips';
+import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { BooksListComponent } from './components/books-list/books-list.component';
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -30,7 +37,10 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
     LoginComponent,
     SignUpComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    CreateBookComponent,
+    BookDetailsComponent,
+    BooksListComponent
   ],
   imports: [
     BrowserModule,
@@ -46,8 +56,12 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
     provideAuth(() => getAuth()),
     provideStorage(() => getStorage()),
     provideFirestore(() => getFirestore()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     HotToastModule.forRoot(),
-    MatMenuModule
+    MatMenuModule,
+    MatChipsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

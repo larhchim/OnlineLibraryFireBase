@@ -15,11 +15,13 @@ mat-toolbar{
     padding: 3px;
     border-radius: 7px;
     cursor: pointer;
+    margin-top: 5%;
 }
 .logo-container span {
     vertical-align: 65%;
     font-family: 'Joti One', cursive;
     font-size: x-large;
+    font-weight: bolder;
     cursor: pointer;
 }
 
@@ -27,8 +29,3 @@ mat-toolbar{
     font-size: large;
 }
 
-@media (max-width: 600px) { 
-    .logo-container span {
-        display: none;
-    }    
-}

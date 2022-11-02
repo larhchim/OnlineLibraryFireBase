@@ -67,7 +67,7 @@ export class SignUpComponent implements OnInit {
         loading: 'Signing in...',
         error: ({ message }) => `${message}`
       })
-    ).subscribe(() => {
+    ).subscribe((data) => {
       this.route.navigate(['/home']);
     })
   }
