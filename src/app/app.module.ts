@@ -21,6 +21,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
 import { MatMenuModule } from '@angular/material/menu';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { ProfileComponent } from './components/profile/profile.component';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideStorage(() => getStorage()),
+    provideFirestore(() => getFirestore()),
     HotToastModule.forRoot(),
     MatMenuModule
   ],

@@ -10,3 +10,25 @@ mat-toolbar{
     border-radius: 100%;
     margin-right: 8px;
 }
+
+.logo-container img {
+    padding: 3px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.logo-container span {
+    vertical-align: 65%;
+    font-family: 'Joti One', cursive;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.user-Name {
+    font-size: large;
+}
+
+@media (max-width: 600px) { 
+    .logo-container span {
+        display: none;
+    }    
+}
