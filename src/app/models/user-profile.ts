@@ -1,4 +1,5 @@
 export interface ProfileUser {
+
     uid: string,
     email?: string,
     displayName?: string,
@@ -7,4 +8,5 @@ export interface ProfileUser {
     lastName?: string,
     phone?: string,
     adress?: string
+    
 }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from './services/authentication.service';
 import { UsersService } from './services/users.service';
+import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,10 @@ export class AppComponent {
 
   user$ = this.usersService.currentUserProfile;
 
-  constructor(private authService: AuthenticationService, private router: Router, private usersService: UsersService){
+  constructor(private authService: AuthenticationService,
+              private router: Router,
+              private usersService: UsersService,
+              private _snackBar: MatSnackBar){
 
   }
 
@@ -21,6 +25,14 @@ export class AppComponent {
     this.authService.logout().subscribe(() => {
       localStorage.removeItem('uid')
       this.router.navigate(['']);
+      this.openSnackBar(
+        "You Logged off Successfully",
+        "dismiss"
+      );
     })
+  }
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action);
   }
 }

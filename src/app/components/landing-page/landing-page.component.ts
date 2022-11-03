@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-landing-page',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _snackBar: MatSnackBar) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
+    this.openSnackBar("Welcome To the main Page Again If you need to Sign In/SignUp/Visit Profile click Top Right", "dismiss");
+  }
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action);
   }
 
 }

@@ -27,7 +27,7 @@
   </ng-template>
 </mat-toolbar>   
 
-<div class="content">
+<div>
   <router-outlet></router-outlet>
 </div>                                             
 
@@ -36,3 +36,15 @@
   <button mat-menu-item (click)="logout()"><mat-icon>login</mat-icon> Log out</button> 
   <button mat-menu-item routerLink="/profile"><mat-icon>account_circle</mat-icon> Profile</button>
 </mat-menu>
+
+
+<!-- Footer -->
+<footer class="footer bg-dark py-5">
+  <div class="container grid grid-3">
+     <div>
+        <h1>Xevlabs
+        </h1>
+        <p>Copyright &copy; 2022</p>
+     </div>
+  </div>
+</footer>

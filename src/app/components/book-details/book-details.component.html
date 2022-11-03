@@ -1,58 +1,57 @@
-<div class="form-container mat-elevation-z5 text-center">
-    <h1>Book Detail</h1>
-    <form class="margin-top" [formGroup]="bookForm">
+<div class="content">
+  <div class="form-container mat-elevation-z5 text-center">
+     <h1>Book Detail</h1>
+     <form class="margin-top" [formGroup]="bookForm">
         <div class="row">
-          <mat-form-field>
-            <input [readonly]="true"
-              type="text"
-              matInput
-              formControlName="title"
-              placeholder="Title"
-            />
-          </mat-form-field>
-          <mat-form-field>
-            <input [readonly]="true"
-              type="text"
-              matInput
-              formControlName="author"
-              placeholder="Author"
-            />
-          </mat-form-field>
+           <mat-form-field>
+              <input [readonly]="true"
+                 type="text"
+                 matInput
+                 formControlName="title"
+                 placeholder="Title"
+                 />
+           </mat-form-field>
+           <mat-form-field>
+              <input [readonly]="true"
+                 type="text"
+                 matInput
+                 formControlName="author"
+                 placeholder="Author"
+                 />
+           </mat-form-field>
         </div>
-    
         <div class="row">
-          <mat-form-field>
-            <input [readonly]="true"
-              type="date"
-              matInput
-              formControlName="publishDate"
-            />
-          </mat-form-field>
-          <mat-form-field>
-            <input [readonly]="true"
-              type="text"
-              matInput
-              formControlName="description"
-              placeholder="Book Description"
-            />
-          </mat-form-field>
+           <mat-form-field>
+              <input [readonly]="true"
+                 type="date"
+                 matInput
+                 formControlName="publishDate"
+                 />
+           </mat-form-field>
+           <mat-form-field>
+              <input [readonly]="true"
+                 type="text"
+                 matInput
+                 formControlName="description"
+                 placeholder="Book Description"
+                 />
+           </mat-form-field>
         </div>
-
         <div class="row">
-            <mat-form-field class="example-chip-list fixing-row" appearance="fill">
-                <mat-label>Book Tags</mat-label>
-                <mat-chip-list #chipList aria-label="Fruit selection">
-                  <mat-chip *ngFor="let tag of tags">
+           <mat-form-field class="example-chip-list fixing-row" appearance="fill">
+              <mat-label>Book Tags</mat-label>
+              <mat-chip-list #chipList aria-label="Fruit selection">
+                 <mat-chip *ngFor="let tag of tags">
                     {{tag.name}}
                     <button matChipRemove>
-                      <mat-icon>cancel</mat-icon>
+                       <mat-icon>cancel</mat-icon>
                     </button>
-                  </mat-chip>
-                  <input class="tags-style" placeholder="New tag..." [readonly]="true"
-                         [matChipInputFor]="chipList">
-                </mat-chip-list>
-            </mat-form-field>
+                 </mat-chip>
+                 <input class="tags-style" placeholder="New tag..." [readonly]="true"
+                 [matChipInputFor]="chipList">
+              </mat-chip-list>
+           </mat-form-field>
         </div>
-    </form>
-
+     </form>
+  </div>
 </div>
