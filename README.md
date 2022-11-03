@@ -1,5 +1,7 @@
 # BibliothequeEnLigne
 
+User can perform several actions such as Creating an Account the data is stored within the use of FireStore Database besides there is the possibility to log in and modify existing account informations such as photo profile and others, on the other hand the connected user can add new Book to the E-LIBRARY System within the use of the RealTime Database this time to have a representational tree of data through JSON Format, the user can also visualize all his added books and perform search on them with several filteters offered by the dataTable, we developped friendly UI easy to use and with hight accuracy of compatibility with all sorts of devices.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
 
 ## Development server
