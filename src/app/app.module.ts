@@ -29,6 +29,11 @@ import { BooksListComponent } from './components/books-list/books-list.component
 import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatSelectModule } from '@angular/material/select';
+
+
 
 @NgModule({
   declarations: [
@@ -61,7 +66,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HotToastModule.forRoot(),
     MatMenuModule,
     MatChipsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

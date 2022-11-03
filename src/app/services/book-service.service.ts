@@ -23,16 +23,12 @@ export class BookService {
     return this.db.object(`${this.dbPath}`+ "/"+ id).valueChanges();
   }
 
-  getAll(): AngularFireList<Book> {
-    return this.booksRef;
+  getAll() {
+    return this.db.object(`${this.dbPath}`).valueChanges();
   }
 
   create(book: Book): Observable<any> {
     return from(this.booksRef.push(book));
-  }
-
-  update(key: string, value: any): Promise<void>{
-    return this.booksRef.update(key, value);
   }
 
   delete(key: string): Promise<void> {
